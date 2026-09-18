@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>rps-design · token sample v1.0</title>
+<title>rps-design · token sample v1.2</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -90,7 +90,7 @@ table.map tr:last-child td{border-bottom:none}
 .st--unexamined i{width:14px;height:14px;border-radius:3px;background:var(--rps-hatch);border:1px solid var(--rps-status-unexamined)}
 .bar{display:flex;height:18px;border-radius:var(--rps-radius-sm);overflow:hidden;margin-top:var(--rps-space-5);border:1px solid var(--rps-line-strong)}
 .bar span{display:block}
-.bar .b-pass{background:var(--rps-text);opacity:.85}
+.bar .b-pass{background:var(--rps-status-pass)}
 .bar .b-caution{background:var(--rps-status-caution)}
 .bar .b-fail{background:var(--rps-status-fail)}
 .bar .b-un{background:var(--rps-hatch)}
@@ -149,7 +149,7 @@ footer{margin-top:var(--rps-space-8);padding-top:var(--rps-space-5);border-top:1
 <header class="top">
   <img src="rps-mark.png" alt="">
   <h1>RPS design tokens</h1>
-  <span class="ver">rps-tokens.css v1.0 · 18 Sep 2026</span>
+  <span class="ver">rps-tokens.css v1.2 · 18 Sep 2026</span>
 </header>
 
 <h2>The OSM ring</h2>
@@ -167,13 +167,13 @@ footer{margin-top:var(--rps-space-8);padding-top:var(--rps-space-5);border-top:1
 </div>
 <table class="map">
   <thead><tr><th>No.</th><th>Pillar</th><th>Colour</th><th>Token</th></tr></thead>
-  <tbody><tr><td>1</td><td>System Health &amp; Reporting</td><td><span class="dot" style="background:var(--rps-pillar-health)"></span>Mint #00EBB4</td><td><code>--rps-pillar-health</code></td></tr><tr><td>2</td><td>Spares, Repairs &amp; Maintenance</td><td><span class="dot" style="background:var(--rps-pillar-spares)"></span>Magenta #D46BD9</td><td><code>--rps-pillar-spares</code></td></tr><tr><td>3</td><td>Training &amp; Knowledge</td><td><span class="dot" style="background:var(--rps-pillar-training)"></span>Steel #9DB4D0</td><td><code>--rps-pillar-training</code></td></tr><tr><td>4</td><td>Lifecycle Management</td><td><span class="dot" style="background:var(--rps-pillar-lifecycle)"></span>Violet #8B7CF6</td><td><code>--rps-pillar-lifecycle</code></td></tr><tr><td>5</td><td>Triage Intelligence</td><td><span class="dot" style="background:var(--rps-pillar-triage)"></span>Cyan #00BEEB</td><td><code>--rps-pillar-triage</code></td></tr><tr><td>6</td><td>Engineer Access</td><td><span class="dot" style="background:var(--rps-pillar-engineer)"></span>Blue #008CF5</td><td><code>--rps-pillar-engineer</code></td></tr></tbody>
+  <tbody><tr><td>1</td><td>System Health &amp; Reporting</td><td><span class="dot" style="background:var(--rps-pillar-health)"></span>Mint #00EBB4</td><td><code>--rps-pillar-health</code></td></tr><tr><td>2</td><td>Spares, Repairs &amp; Maintenance</td><td><span class="dot" style="background:var(--rps-pillar-spares)"></span>Magenta #D46BD9</td><td><code>--rps-pillar-spares</code></td></tr><tr><td>3</td><td>Training &amp; Knowledge</td><td><span class="dot" style="background:var(--rps-pillar-training)"></span>Steel #9DB4D0</td><td><code>--rps-pillar-training</code></td></tr><tr><td>4</td><td>Lifecycle Management</td><td><span class="dot" style="background:var(--rps-pillar-lifecycle)"></span>Orange #FFA13B</td><td><code>--rps-pillar-lifecycle</code></td></tr><tr><td>5</td><td>Triage Intelligence</td><td><span class="dot" style="background:var(--rps-pillar-triage)"></span>Cyan #00BEEB</td><td><code>--rps-pillar-triage</code></td></tr><tr><td>6</td><td>Engineer Access</td><td><span class="dot" style="background:var(--rps-pillar-engineer)"></span>Blue #008CF5</td><td><code>--rps-pillar-engineer</code></td></tr></tbody>
 </table>
 <ul class="rules">
   <li>Active pillars keep their colour and carry the word “Active”. Colour is never the only cue.</li>
   <li>Subdued pillars open a “Talk to RPS” page, never data.</li>
   <li>Pillar colour marks the service, not its health. A pillar with overdue items does not turn red; the item inside it does.</li>
-  <li>The mock-up's bright green “Active” pill is not used, so green never appears to mean “compliant”.</li>
+  <li>“Active” is shown in the pillar's own colour, never green, so green only ever means passed.</li>
 </ul>
 
 <h2>Shell, text and interaction</h2>
@@ -186,11 +186,11 @@ footer{margin-top:var(--rps-space-8);padding-top:var(--rps-space-5);border-top:1
   <div class="sw"><span class="sw__chip" style="background:var(--rps-text-muted)"></span><div><b>Text, muted</b><code>--rps-text-muted</code><span class="hex">#93A4BC · 7.7:1</span><p>Labels. 6.6:1 on raised panels, so safe at small sizes.</p></div></div>
   <div class="sw"><span class="sw__chip" style="background:var(--rps-action)"></span><div><b>Action</b><code>--rps-action</code><span class="hex">#008CF5 · 5.6:1</span><p>Links, focus, active navigation.</p></div></div>
   <div class="sw"><span class="sw__chip" style="background:var(--rps-action-fill)"></span><div><b>Action fill</b><code>--rps-action-fill</code><span class="hex">#0072CE · white 4.9:1</span><p>White on #008CF5 is only 3.5:1, so filled buttons sit one step darker. Agreed.</p></div></div>
-  <div class="sw"><span class="sw__chip" style="background:var(--rps-cta-public)"></span><div><b>Public call to action</b><code>--rps-cta-public</code><span class="hex">#FFA13B</span><p>Website only. Too close to caution amber to share a screen with it.</p></div></div>
+  <div class="sw"><span class="sw__chip" style="background:var(--rps-cta-public)"></span><div><b>Public call to action</b><code>--rps-cta-public</code><span class="hex">#FFA13B</span><p>Website call to action, and the Lifecycle pillar colour. Never shares a view with caution amber.</p></div></div>
 </div>
 
 <h2>Status</h2>
-<p class="lead">Every status carries an icon and a word. Passed is quiet: text colour and a tick. Colour is spent on what needs attention.</p>
+<p class="lead">Every status carries an icon and a word, and colour comes last. Passed is green with a tick, held well clear of brand mint.</p>
 <div class="status-row">
   <span class="st st--fail"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="8" cy="8" r="6.5"/><path d="M5.5 5.5l5 5M10.5 5.5l-5 5"/></svg>Failed</span>
   <span class="st st--fail"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg>Overdue</span>
@@ -214,7 +214,7 @@ footer{margin-top:var(--rps-space-8);padding-top:var(--rps-space-5);border-top:1
       <button class="btn btn--secondary" type="button">Talk to RPS</button>
       <a class="btn btn--public" href="#">Let’s talk OSM</a>
     </div>
-    <p class="note">The pill-shaped amber button is the website's. It does not appear in the portal or Hub.</p>
+    <p class="note">The pill-shaped orange button is the website's. It does not appear in the portal or Hub.</p>
 
     <h3 style="margin-top:var(--rps-space-5)">A Hub panel with no source yet</h3>
     <div class="empty">
@@ -250,7 +250,7 @@ footer{margin-top:var(--rps-space-8);padding-top:var(--rps-space-5);border-top:1
 </div>
 
 <footer>
-  Print this page (Ctrl+P) to check the light print palette. rps-tokens.css v1.0. Ring geometry from RPS-website.
+  Print this page (Ctrl+P) to check the light print palette. rps-tokens.css v1.2. Ring geometry from RPS-website.
 </footer>
 </div>
 

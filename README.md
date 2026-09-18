@@ -1,6 +1,6 @@
 # rps-design
 
-Source of truth for the shared RPS design tokens used by www.1rps.com,
+Source of truth for the shared RPS design tokens (v1.2) used by www.1rps.com,
 portal.1rps.com and hub.1rps.com. Build Plan v0.2, Phase 2.
 
 | File | What it is |
@@ -25,10 +25,15 @@ the version and copy it again.
   top. Tokens are named by service so a later reorder does not touch the
   palette.
 - **Pillar colours**, approved 18 September 2026: Health mint #00EBB4,
-  Spares magenta #D46BD9, Training steel #9DB4D0, Lifecycle violet
-  #8B7CF6, Triage cyan #00BEEB, Engineer Access blue #008CF5. Arranged so
-  no ring neighbours merge for red–green colour-blind viewers. Supersedes
-  Build Plan 5.3.
+  Spares magenta #D46BD9, Training steel #9DB4D0, Lifecycle orange
+  #FFA13B (v1.2, was violet), Triage cyan #00BEEB, Engineer Access blue
+  #008CF5. No ring neighbours merge for red–green colour-blind viewers.
+  Supersedes Build Plan 5.3.
+- **Passed is green** #56D364 with a tick (v1.1, was text colour). Held
+  well clear of brand mint and never used for identity.
+- **Lifecycle orange never shares a view with caution amber** (v1.2). They
+  are almost the same colour; the word and icon on every status are what
+  keep them apart, and pages are designed so they do not meet.
 - **Type**: Roboto for all text; Stolzl retired. IBM Plex Mono for figures.
 - **Filled buttons** use `--rps-action-fill` #0072CE with white text (4.9:1),
   because white on #008CF5 is 3.5:1 and fails AA.

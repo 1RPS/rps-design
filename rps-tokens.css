@@ -1,8 +1,28 @@
 /* ============================================================
    rps-tokens.css  —  RPS shared design tokens
-   Version 1.0  •  18 September 2026  •  source of truth: rps-design
+   Version 1.2  •  18 September 2026  •  source of truth: rps-design
    Copy this file into each app. Do not hot-link it.
-   Status: v1.0, approved 18 September 2026.
+   Status: v1.2, approved 18 September 2026. Supersedes v1.0.
+
+   v1.1, 18 September 2026, agreed with Alex Hitchcock:
+   --rps-status-pass is a green again. v1.0 made it text colour to keep
+   brand green and "this passed" green from being the same colour saying
+   two different things. The hazard is real, so it is answered by holding
+   the two greens apart rather than by giving one of them up: pass green
+   sits 39 degrees of hue from brand mint and is never used for identity.
+   Green means good, which is what people already read it as.
+
+   v1.2, 18 September 2026, agreed with Alex Hitchcock:
+   --rps-pillar-lifecycle is the orange the public website already gives
+   that service, in place of the violet v1.0 chose. The reason v1.0 kept
+   amber out of the portal was that amber means caution there; the ring
+   now lives on a page that carries no status at all, so the two never
+   meet. Pillar colour still identifies a service and never a status.
+
+   Rule that comes with v1.2: lifecycle orange and caution amber are
+   almost the same colour, so they never share a view. A page that shows
+   the lifecycle colour shows no caution status, and the reverse. The
+   per-service pages, when built, must honour this.
    ============================================================ */
 :root{
   /* ---- Shell ---- */
@@ -28,7 +48,9 @@
   --rps-brand-mint:     #00EBB4;
   --rps-brand-gradient: linear-gradient(92deg, #00EBB4 10%, #008CF5 80%);
 
-  /* ---- Public website only. In portal and Hub, amber means caution. ---- */
+  /* ---- Website call to action. The same orange is the Lifecycle pillar
+     colour (v1.2). In portal and Hub, amber means caution, so this colour
+     never shares a view with caution status. ---- */
   --rps-cta-public:     #FFA13B;
 
   /* ---- OSM pillars: identify a service, never a status ----
@@ -40,14 +62,18 @@
   --rps-pillar-health:     #00EBB4;  /* 1 System Health & Reporting  mint    */
   --rps-pillar-spares:     #D46BD9;  /* 2 Spares, Repairs & Maint.   magenta */
   --rps-pillar-training:   #9DB4D0;  /* 3 Training & Knowledge       steel   */
-  --rps-pillar-lifecycle:  #8B7CF6;  /* 4 Lifecycle Management       violet  */
+  --rps-pillar-lifecycle:  #FFA13B;  /* 4 Lifecycle Management       orange  */
   --rps-pillar-triage:     #00BEEB;  /* 5 Triage Intelligence        cyan    */
   --rps-pillar-engineer:   #008CF5;  /* 6 Engineer Access            blue    */
 
   /* ---- Status: always with an icon and words ---- */
   --rps-status-fail:       #F2545B;  /* failed, overdue.                 5.7:1 */
   --rps-status-caution:    #F0A63A;  /* not presented, due soon, gaps.   9.5:1 */
-  --rps-status-pass:       var(--rps-text);  /* passed: text plus tick, not green */
+  --rps-status-pass:       #56D364;  /* passed. 10.1:1 on shell, 9.3:1 on
+                                        panel. Hue 127, well clear of brand
+                                        mint at 166, so it cannot be mistaken
+                                        for identity colour. Keeps its tick:
+                                        colour is never the only cue.      */
   --rps-status-unexamined: #6B7780;  /* hatched fill only, never text colour  */
   --rps-hatch: repeating-linear-gradient(135deg,
                  var(--rps-status-unexamined) 0 3px, transparent 3px 7px);
