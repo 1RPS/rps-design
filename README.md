@@ -29,6 +29,14 @@ the version and copy it again.
   #FFA13B (v1.2, was violet), Triage cyan #00BEEB, Engineer Access blue
   #008CF5. No ring neighbours merge for red–green colour-blind viewers.
   Supersedes Build Plan 5.3.
+- **Entitlement is strength, not greyness**, 23 September 2026: every
+  pillar keeps its own colour whether a customer has that service or not,
+  because pillar colour identifies a service and never its status. What
+  they have is shown at full fill and glow with an ACTIVE pill; what they
+  do not is the same colour dimmed, inviting a conversation on hover. The
+  lock and "Not included" are retired: six locks on one screen read as a
+  sales pitch. The portal ring takes the website wheel's styling, so the
+  two read as one system.
 - **Passed is green** #56D364 with a tick (v1.1, was text colour). Held
   well clear of brand mint and never used for identity.
 - **Lifecycle orange never shares a view with caution amber** (v1.2). They
