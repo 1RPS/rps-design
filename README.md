@@ -27,6 +27,11 @@ the version and copy it again.
   gradient. Files in `rps-connect/`. The Resolution Production Services
   logo stays the company's logo; RPS Connect sits under it. Use the light
   lockup on light pages, the dark one on the dark portal and Triage.
+  The family, added the same day: a dark and a light lockup for each
+  module (`rps-connect-hub-`, `-portal-`, `-triage-`, `-cashflow-`);
+  one-colour lockups and marks in white, ink and mint, for places that
+  take one colour; icons drawn for 16, 32 and 48 px, and
+  `favicon.ico` holding them. Each as SVG and PNG.
 - **Ring order**, 18 September 2026: 1 System Health & Reporting,
   2 Spares, Repairs & Maintenance, 3 Training & Knowledge, 4 Lifecycle
   Management, 5 Triage Intelligence, 6 Engineer Access, clockwise from the
