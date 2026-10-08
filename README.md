@@ -8,6 +8,7 @@ portal.1rps.com and hub.1rps.com. Build Plan v0.2, Phase 2.
 | `rps-tokens.css` | Colour, type, space and radius as CSS variables, with a print block that flips every surface to paper. |
 | `index.html` | The rendered check page. Open it in a browser, and print it. |
 | `rps-mark.png` | Logo mark, from RPS-website. |
+| `rps-connect/` | The RPS Connect logo: light and dark lockups (each also on a transparent background), the mark alone, and the app icon. SVG for screens and print, PNG for documents. The lettering is outlined, so no font is needed. |
 
 ## How apps use it
 
@@ -19,6 +20,13 @@ the version and copy it again.
 
 ## Decided
 
+- **RPS Connect**, 8 October 2026: the name for the whole digital estate
+  (the Hub, the inspection app and customer portal, Triage, RPS Cashflow
+  and Talent LMS). Its mark is an open C: the RPS ring opened up, with a
+  centre node and a trace leaving each end, in the brand mint-to-blue
+  gradient. Files in `rps-connect/`. The Resolution Production Services
+  logo stays the company's logo; RPS Connect sits under it. Use the light
+  lockup on light pages, the dark one on the dark portal and Triage.
 - **Ring order**, 18 September 2026: 1 System Health & Reporting,
   2 Spares, Repairs & Maintenance, 3 Training & Knowledge, 4 Lifecycle
   Management, 5 Triage Intelligence, 6 Engineer Access, clockwise from the
